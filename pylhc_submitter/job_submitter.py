@@ -496,6 +496,7 @@ def _setup_folders(job_df: tfs.TfsDataFrame, working_directory: PathOrStr,
         else:
             LOG.debug(f"   created '{job_dir}'.")
 
+    # Replicate the job directories in the output location
     if _custom_output_dest:
         strip_dest_dir = _strip_eos_uri(destination_directory)
         strip_dest_dir.mkdir(parents=True, exist_ok=True)
